@@ -4,6 +4,5 @@ public class HelloWorld {
         System.out.println("Agnieszka");
         System.out.println(42);
         System.out.println('G');
-
     }
 }
