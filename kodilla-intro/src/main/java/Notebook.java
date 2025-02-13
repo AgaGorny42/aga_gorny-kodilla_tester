@@ -29,14 +29,14 @@ public class Notebook {
         }
     }
     public void checkyear() {
-        if (this.year < 2010 ) {
-            System.out.println("The notebook released in " + this.year + " is old and cannot cost more than " + this.price + " euros.");
+        if (this.year < 2010 && this.price < 600) {
+            System.out.println("This notebook isn't expensive, but is old.");
         }
-        else if (this.year < 2020) {
-            System.out.println("This notebook is too expensive as for the one made in " + this.year + ".");
+        else if (this.year >= 2015 && this.price <= 1000) {
+            System.out.println("This notebook isn't very expensive, but is not modern. ");
         }
         else {
-            System.out.println("The notebooks made after " + this.year + " are expensive.");
+            System.out.println("This notebook is expensive, but modern.");
         }
     }
 
