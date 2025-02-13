@@ -17,6 +17,5 @@ public class MainExtended {
 
         boolean likeJava = true;
         System.out.println(likeJava);
-
     }
 }
