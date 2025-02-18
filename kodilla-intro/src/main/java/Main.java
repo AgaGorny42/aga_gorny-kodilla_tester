@@ -1,8 +1,10 @@
+import java.util.concurrent.ThreadLocalRandom;
+
 public class Main {
     public static void main(String[] args) {
-        String helloFirstClass = "Hello from FirstClass";
-        System.out.println(helloFirstClass);
 
-
+        Exersise exersise = new Exersise("Adam", 40.5, 178);
+        System.out.println(exersise.name + " " + exersise.age + " " + exersise.height + " ");
+        exersise.checkName();
     }
 }

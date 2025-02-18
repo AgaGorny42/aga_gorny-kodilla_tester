@@ -1,8 +1,10 @@
 public class HelloWorld {
     public static void main(String[] args) {
-        System.out.println("Hello World!");
-        System.out.println("Agnieszka");
-        System.out.println(42);
-        System.out.println('G');
+        Grades grades = new Grades();
+        grades.add(3);
+        grades.add(4);
+        grades.add(5);
+        System.out.println(grades.getLastGrade());
+        System.out.println(grades.averageGrade());
     }
 }
