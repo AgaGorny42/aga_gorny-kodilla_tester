@@ -28,24 +28,21 @@ public class CalculatorTestSuite {
     public void testPow() {
         Calculator calculator = new Calculator();
         int a = 5;
-        int b = 8;
-        double powResult = calculator.pow(a, b);
-        assertEquals(390625, powResult, 0);
+        double powResult = calculator.pow(a);
+        assertEquals(25, powResult, 0);
     }
     @Test
     public void testPowWithZero() {
         Calculator calculator = new Calculator();
         int a = 0;
-        int b = 2;
-        double powResult = calculator.pow(a, b);
+        double powResult = calculator.pow(a);
         assertEquals(0.0, powResult, 0);
     }
     @Test
     public void testPowWithNegativeNumber() {
         Calculator calculator = new Calculator();
         int a = -1;
-        int b = 3;
-        double powResult = calculator.pow(a, b);
+        double powResult = calculator.pow(a);
         assertEquals(-1, powResult, 0);
     }
 }
