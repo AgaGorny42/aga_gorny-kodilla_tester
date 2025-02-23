@@ -43,6 +43,6 @@ public class CalculatorTestSuite {
         Calculator calculator = new Calculator();
         int a = -1;
         double powResult = calculator.pow(a);
-        assertEquals(-1, powResult, 0);
+        assertEquals(1, powResult, 0);
     }
 }
