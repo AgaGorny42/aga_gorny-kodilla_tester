@@ -8,6 +8,7 @@ public class CashMachimeTestSuite {
 
     CashMachine transactions = new CashMachine();
 
+
     @Test
     public void shouldCheckWhenZeroTransactions() {
         assertEquals(0, transactions.getNumberOfTransactions());
