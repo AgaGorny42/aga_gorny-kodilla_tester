@@ -9,6 +9,7 @@ public class Bank {
         this.size = 0;
         this.cashMachine = new CashMachine[0];
     }
+
     public void addCashMachine(CashMachine atm) {
         this.size++;
         CashMachine[] newCashMachine = new CashMachine[this.size];
@@ -16,35 +17,54 @@ public class Bank {
         newCashMachine[this.size - 1] = atm;
         this.cashMachine = newCashMachine;
     }
+
     public double getTotalBalanceOfAllCashMachines() {
-        if (this.cashMachine.length == 0) {
-            return 0;
-        }
         double totalBalance = 0;
         for (int i = 0; i < this.cashMachine.length; i++) {
             totalBalance += this.cashMachine[i].getBalance();
         }
         return totalBalance;
     }
-    public double getAverageOfAllWithdrawals() {
-        double totalBalance = 0;
-        if(this.cashMachine.length ==0) {
-            return 0;
-        }
+    public double getNumberOfDepositsOfAllAtms() {
+        int totalDeposits = 0;
         for (int i = 0; i < this.cashMachine.length; i++) {
-            totalBalance += this.cashMachine[i].getAverageOfWithdrawals();
+            totalDeposits += cashMachine[i].getNumberOfDeposits();
         }
-        return totalBalance / this.cashMachine.length;
+        return totalDeposits;
     }
-    public double getAverageOfAllDeposits () {
-        double totalBalance = 0;
-        if(this.cashMachine.length == 0) {
+    public double getNumberOfWithdrawalsOfAllAtms() {
+        int totalWithdrawals = 0;
+        for (int i = 0; i < this.cashMachine.length; i++) {
+            totalWithdrawals += cashMachine[i].getNumberOfWithdrawals();
+        }
+        return totalWithdrawals;
+    }
+    public double getSumOfAllWithdrawalsOfAllAtms () {
+        double sum = 0;
+        for (int i = 0; i < this.cashMachine.length; i++) {
+            sum += cashMachine[i].getSumOfWithdrawals();
+        }
+        return sum;
+    }
+    public double getSumOfAllDepositsOfAllAtms () {
+        double sum = 0;
+        for (int i = 0; i < this.cashMachine.length; i++) {
+            sum += cashMachine[i].getSumOfDeposits();
+        }
+        return sum;
+    }
+    public double getAverageOfAllWithdrawals() {
+        if(getNumberOfWithdrawalsOfAllAtms() == 0) {
             return 0;
         }
-        for (int i = 0; i < this.cashMachine.length; i++) {
-            totalBalance += this.cashMachine[i].getAverageOfDeposits();
+        return getSumOfAllWithdrawalsOfAllAtms()/getNumberOfWithdrawalsOfAllAtms();
+    }
+
+    public double getAverageOfAllDeposits() {
+        if(getNumberOfDepositsOfAllAtms() == 0) {
+            return 0;
         }
-        return totalBalance / this.cashMachine.length;
+        return getSumOfAllDepositsOfAllAtms() / getNumberOfDepositsOfAllAtms();
     }
 }
 

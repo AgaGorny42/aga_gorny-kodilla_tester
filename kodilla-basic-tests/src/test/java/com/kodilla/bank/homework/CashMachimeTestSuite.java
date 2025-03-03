@@ -16,6 +16,8 @@ public class CashMachimeTestSuite {
         assertEquals(0, transactions.getNumberOfDeposits());
         assertEquals(0, transactions.getAverageOfWithdrawals());
         assertEquals(0, transactions.getAverageOfDeposits());
+        assertEquals(0, transactions.getSumOfWithdrawals());
+        assertEquals(0, transactions.getSumOfDeposits());
     }
     @Test
     public void shouldAddTransactionsToTableDepositAndWithdrawal() {
@@ -34,6 +36,7 @@ public class CashMachimeTestSuite {
         assertEquals(2, transactions.getNumberOfWithdrawals());
         assertEquals(-101, transactions.getAverageOfWithdrawals(), 0.001);
         System.out.println("average of withdrawals: " + transactions.getAverageOfWithdrawals());
+        assertEquals(-202.00, transactions.getSumOfWithdrawals());
 
         }
     @Test
@@ -45,5 +48,6 @@ public class CashMachimeTestSuite {
         assertEquals(2, transactions.getNumberOfDeposits());
         assertEquals(50.5, transactions.getAverageOfDeposits(), 0.1);
         System.out.println("average of deposits: " + transactions.getAverageOfDeposits());
+        assertEquals(101.00, transactions.getSumOfDeposits());
     }
 }

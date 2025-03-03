@@ -5,14 +5,10 @@ public class CashMachine {
     private double totalTransactions[];
     private int size;
     private double balance = 0;
-//    private double withdrawal;
-//    private double deposit;
 
     public CashMachine() {
         this.size = 0;
         this.totalTransactions = new double[0];
-//        this.withdrawal = 0;
-//        this.deposit = 0;
     }
     public void addTransaction(double transaction) {
         if (transaction == 0) {
@@ -39,10 +35,17 @@ public class CashMachine {
             }
         }
         return count;
-//        public int getNumberOfWithdrawals(double transaction) {
-//        if (transaction < 0) {
-//            this.withdrawal++; }
-//         return this.withdrawals;
+    }
+    public double getSumOfWithdrawals () {
+        double sum = 0;
+        if (this.totalTransactions.length != 0) {
+            for (int i = 0; i < this.totalTransactions.length; i++) {
+                if (totalTransactions[i] < 0) {
+                    sum += this.totalTransactions[i];
+                }
+            }
+        }
+        return sum;
     }
     public int getNumberOfDeposits() {
         int count = 0;
@@ -52,11 +55,17 @@ public class CashMachine {
             }
         }
         return count;
-
-//        public int getNumberOfDeposits(double transaction) {
-//        if (transaction > 0) {
-//            this.deposit++; }
-//        return this.deposit;
+    }
+    public double getSumOfDeposits () {
+        double sum = 0;
+        if (this.totalTransactions.length != 0) {
+            for (int i = 0; i < this.totalTransactions.length; i++) {
+                if (totalTransactions[i] > 0) {
+                    sum += this.totalTransactions[i];
+                }
+            }
+        }
+        return sum;
     }
     public double getAverageOfWithdrawals() {
         double sum = 0;
