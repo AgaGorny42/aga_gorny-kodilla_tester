@@ -9,7 +9,6 @@ public class Bank {
         this.size = 0;
         this.cashMachine = new CashMachine[0];
     }
-
     public void addCashMachine(CashMachine atm) {
         this.size++;
         CashMachine[] newCashMachine = new CashMachine[this.size];
@@ -17,7 +16,6 @@ public class Bank {
         newCashMachine[this.size - 1] = atm;
         this.cashMachine = newCashMachine;
     }
-
     public double getTotalBalanceOfAllCashMachines() {
         double totalBalance = 0;
         for (int i = 0; i < this.cashMachine.length; i++) {

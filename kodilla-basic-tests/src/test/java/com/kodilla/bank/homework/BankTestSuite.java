@@ -11,10 +11,6 @@ public class BankTestSuite {
     public void whenZeroAtmInBank () {
         Bank bank = new Bank();
 
-        CashMachine atm = new CashMachine();
-        CashMachine atm1 = new CashMachine();
-        CashMachine atm2 = new CashMachine();
-
         assertEquals(0, bank.getTotalBalanceOfAllCashMachines());
         assertEquals(0, bank.getAverageOfAllWithdrawals());
         assertEquals(0, bank.getAverageOfAllDeposits());
