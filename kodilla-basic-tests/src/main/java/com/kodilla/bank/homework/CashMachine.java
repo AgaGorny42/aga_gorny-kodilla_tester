@@ -89,7 +89,6 @@ public class CashMachine {
                 sum += this.totalTransactions[i];
             }
         }
-
         return sum / getNumberOfDeposits();
     }
 }

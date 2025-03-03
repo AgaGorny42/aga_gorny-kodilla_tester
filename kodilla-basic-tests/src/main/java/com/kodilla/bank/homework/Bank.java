@@ -57,7 +57,6 @@ public class Bank {
         }
         return getSumOfAllWithdrawalsOfAllAtms()/getNumberOfWithdrawalsOfAllAtms();
     }
-
     public double getAverageOfAllDeposits() {
         if(getNumberOfDepositsOfAllAtms() == 0) {
             return 0;
