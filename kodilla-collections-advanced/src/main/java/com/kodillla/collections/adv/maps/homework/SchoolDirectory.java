@@ -35,7 +35,8 @@ public class SchoolDirectory {
 
             System.out.println(school.getKey().getFirstName() + " " + school.getKey().getLastName()
                     + " is the director of " + school.getValue().getNameOfSchool() + ".");
-            System.out.println("There are " + sum + " students at schools.");
+            System.out.println("There are " + school.getValue().getSumOfStudents() + " students at this school.");
         }
+        System.out.println("There are " + sum + " students at these schools.");
     }
 }
