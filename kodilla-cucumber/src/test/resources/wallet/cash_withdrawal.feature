@@ -3,23 +3,27 @@ Feature: Cash Withdrawal
     Given I have deposited $200 in my wallet
     When i request $30
     Then $30 should be dispensed
+    And the balance of my wallet should be $170
 
-  Scenario: Withdrawal of all the money from the wallet
-    Given I should have $170 in my wallet
-    When I request $170
-    Then $170 should be dispensed
+  Scenario: Withdrawal from the wallet using cash machine
+    Given I should have $100 in my wallet
+    When I request $100 from cash machine
+    Then I should receive $100 from cash machine
+    And I can check actual balance $0 after withdrawal
 
-  Scenario:  Unsuccessful withdrawal from the wallet
-    Given I should have $0 in my wallet
-    When I request $20
-    Then Withdrawal should be rejected
+  Scenario: I can withdraw money from my wallet but not more than actual wallet balance
+    Given I have $500 in my wallet
+    When I want to withdraw $600 from cash machine
+    Then I should not receive any money
 
-  Scenario: Checking balance of my wallet
-    Given I have &0 in my wallet
-    When I request to check the balance in my wallet
-    Then I should get information about the wallet ballance
+  Scenario:  I cannot get credit on my account
+    Given I have no money in my wallet
+    When I request $100 from cash machine
+    Then I should not receive any money
 
-  Scenario:  Cash withdrawal at Cashier
-    Given I have deposited $500 in my wallet
-    When I request $50
-    Then $50 should be in cashslot
+  Scenario: I can deposit money into my wallet using cash machine
+    Given I have no money in my wallet
+    When I deposit $1000 using cash machine
+    Then My wallet balance should be $1000
+
+
