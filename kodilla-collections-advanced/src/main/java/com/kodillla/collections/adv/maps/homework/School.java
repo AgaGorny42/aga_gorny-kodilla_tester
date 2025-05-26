@@ -17,6 +17,7 @@ public class School {
             sum += numbers;
         return sum;
     }
+
     public String getNameOfSchool () {
         return nameOfSchool;
     }

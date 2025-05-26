@@ -17,6 +17,7 @@ public class Principal {
     public String getLastName() {
         return lastName;
     }
+
     @Override
     public String toString() {
         return "Principal{" +
