@@ -28,15 +28,16 @@ public class EbayHomeworkTest {
     }
 
     @Test
-    void randomResultTest() throws InterruptedException {
+    public void randomResultTest() throws InterruptedException {
 
         EbayHomework ebaySearch = new EbayHomework(driver);
         EbayHomeworkRandomResult ebayHomeworkRandomResult = ebaySearch.randomResult();
         Assertions.assertNotNull(ebayHomeworkRandomResult.getUrl());
-    }
 
+    }
     @AfterEach
-    void testDown() {
+    public void testDown() {
         driver.close();
     }
+
 }

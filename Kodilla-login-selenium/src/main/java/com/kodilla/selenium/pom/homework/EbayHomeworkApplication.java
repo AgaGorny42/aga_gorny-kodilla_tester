@@ -26,5 +26,6 @@ public class EbayHomeworkApplication {
         wait.withTimeout(waitTime);
 
         driver.close();
+
     }
 }

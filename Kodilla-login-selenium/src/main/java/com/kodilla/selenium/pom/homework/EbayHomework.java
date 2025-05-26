@@ -39,5 +39,6 @@ public class EbayHomework extends AbstractPom {
         Thread.sleep(10000);
 
         return new EbayHomeworkRandomResult(driver);
+
     }
 }
