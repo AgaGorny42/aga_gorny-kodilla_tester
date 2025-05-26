@@ -28,17 +28,16 @@ public class EbayHomework extends AbstractPom {
         inputField.submit();
     }
 
-    public WebElement randomResult() {
+    public EbayHomeworkRandomResult randomResult() throws InterruptedException {
         Random random = new Random();
         int randomIndex = random.nextInt(listResult.size());
         WebElement result = listResult.get(randomIndex);
 
         System.out.println(listResult.size());
+        result.click();
 
-        return result;
+        Thread.sleep(10000);
+
+        return new EbayHomeworkRandomResult(driver);
     }
-//    public void openResult(){
-//        ((JavascriptExecutor) driver).executeScript("window.open('" + randomResult() + "');");
-//        System.out.println(randomResult());
-//    }
 }

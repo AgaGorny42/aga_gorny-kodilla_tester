@@ -4,14 +4,10 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class EbayHomeworkTest {
 
@@ -29,20 +25,18 @@ public class EbayHomeworkTest {
 
         EbayHomework ebaySearch = new EbayHomework(driver);
         ebaySearch.fillInSearchField("przyroda");
-        ebaySearch.randomResult().click();
     }
-    @Test
-    public void randomResultTest(){
-        List<WebElement> webElements = driver.findElements(By.xpath("//*[@role='heading' and @aria-level='3']"));
-        List<String> expectedWebElementsGetText = new ArrayList<>();
-        for (WebElement element : webElements) {
-            expectedWebElementsGetText.add(element.getText());
-        }
-        Assertions.assertTrue(expectedWebElementsGetText.contains(ebayHomework.randomResult().getText()));
 
+    @Test
+    void randomResultTest() throws InterruptedException {
+
+        EbayHomework ebaySearch = new EbayHomework(driver);
+        EbayHomeworkRandomResult ebayHomeworkRandomResult = ebaySearch.randomResult();
+        Assertions.assertNotNull(ebayHomeworkRandomResult.getUrl());
     }
+
     @AfterEach
-    public void testDown() {
+    void testDown() {
         driver.close();
     }
 }
