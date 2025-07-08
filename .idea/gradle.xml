@@ -9,7 +9,20 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/Kodilla-login-selenium" />
+            <option value="$PROJECT_DIR$/kidilla-rest-api" />
+            <option value="$PROJECT_DIR$/kodilla-advanced-tests" />
+            <option value="$PROJECT_DIR$/kodilla-basic-tests" />
+            <option value="$PROJECT_DIR$/kodilla-code-coverage" />
+            <option value="$PROJECT_DIR$/kodilla-collections" />
+            <option value="$PROJECT_DIR$/kodilla-collections-advanced" />
+            <option value="$PROJECT_DIR$/kodilla-cucumber" />
             <option value="$PROJECT_DIR$/kodilla-intro" />
+            <option value="$PROJECT_DIR$/kodilla-rest-api" />
+            <option value="$PROJECT_DIR$/kodilla-selenium" />
+            <option value="$PROJECT_DIR$/kodilla-spring-basic" />
+            <option value="$PROJECT_DIR$/kodilla-stream" />
+            <option value="$PROJECT_DIR$/kodilla-testcontainers" />
           </set>
         </option>
       </GradleProjectSettings>

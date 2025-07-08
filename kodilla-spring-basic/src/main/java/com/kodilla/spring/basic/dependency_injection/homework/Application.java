@@ -1,5 +1,8 @@
 package com.kodilla.spring.basic.dependency_injection.homework;
 
+import org.springframework.boot.SpringBootConfiguration;
+
+
 public class Application {
 
     public static void main(String[] args) {

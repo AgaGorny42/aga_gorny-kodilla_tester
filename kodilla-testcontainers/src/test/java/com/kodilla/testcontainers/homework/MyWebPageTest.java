@@ -26,11 +26,11 @@ public class MyWebPageTest {
     public GenericContainer webServer =
             new GenericContainer("exercise:latest")
 //                    new ImageFromDockerfile()
-//                            .withFileFromClasspath("/tmp/index1.html", "index1.html")
+//                            .withFileFromClasspath("/tmp/index.html", "index.html")
 //                            .withDockerfileFromBuilder(builder ->
 //                                    builder
 //                                            .from("httpd:2.4")
-//                                            .copy("/tmp/index1.html", "/usr/local/apache2/htdocs")
+//                                            .copy("/tmp/index.html", "/usr/local/apache2/htdocs")
 //                                            .build()))
                     .withNetwork(network)
                     .withNetworkAliases("my-server")
